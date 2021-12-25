@@ -1,6 +1,7 @@
 import React from 'react';
-import { AppBar, InputBase, Toolbar } from '@mui/material';
+import { Box, Stack, InputBase, Toolbar } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
+import Stack from '@mui/material/Stack/Stack';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -34,16 +35,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const Header = () => {
   return (
     <>
-      <AppBar>
-				<Toolbar>
+      <Box>
+				<Stack direction="row">
+          Youtube Favorites
         <Search>
           <StyledInputBase
             placeholder="検索…"
             inputProps={{ 'aria-label': 'search' }}
           />
         </Search>
-				</Toolbar>
-      </AppBar>
+				</Stack>
+      </Box>
     </>
   );
 };
