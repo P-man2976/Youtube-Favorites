@@ -1,6 +1,7 @@
 /**@jsx jsx */
 import React from 'react';
-import { Box, Stack, InputBase, TextField } from '@mui/material';
+import { Box, Stack, InputBase, TextField, IconButton } from '@mui/material';
+import  MenuIcon from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
 import Stack from '@mui/material/Stack/Stack';
 import { jsx, css } from '@emotion/react';
@@ -36,15 +37,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const headerCss = css `
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 10px;
-  min-height: 5vh
 `
 
 const Header = () => {
   return (
     <>
       <Box css={headerCss}>
+        <IconButton>
+          <MenuIcon />
+        </IconButton>
         <Stack direction="row">
           <TextField label="検索…" variant="filled" size="small"/>
         </Stack>
