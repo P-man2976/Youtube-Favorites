@@ -43,10 +43,14 @@ const Header = () => {
     <>
       <Box sx={{padding: "10px"}}>
         <Stack direction="row" spacing={2}>
-          <IconButton>
+          <IconButton onClick={toggleDrawer(true)}>
             <MenuIcon />
           </IconButton>
-          <SwipeableDrawer>
+          <SwipeableDrawer
+            anchor="top"
+            onOpen={toggleDrawer(true)}
+            onClose={toggleDrawer(false)}
+          >
             <List>
               {[{
                 icon: <HomeIcon />,
