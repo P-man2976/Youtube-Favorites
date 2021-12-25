@@ -15,11 +15,11 @@ const Notfound = () => {
   return (
     <>
       <Header />
-      <Stack>
+      <Stack sx={{ padding: '10px' }}>
         <ReactMarkdown className="markdown">
           {notFoundmd}
         </ReactMarkdown>
-        <Button variant="outlined" component={RouterLink} to="/">
+        <Button component={RouterLink} to="/">
           ホームに戻る
         </Button>
       </Stack>
