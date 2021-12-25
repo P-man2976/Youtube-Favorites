@@ -9,7 +9,7 @@ import {
 
 const IconListButton = (props) => {
   return (
-    <ListItem button key={props.key}>
+    <ListItem button key={props.key} component={props.component} to={props.to}>
       <ListItemIcon>
         {props.icon}
       </ListItemIcon>

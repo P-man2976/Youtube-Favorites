@@ -24,7 +24,7 @@ Googleアカウントでログインすることなく、お気に入りのチ�
 #### チャンネルIDを使って検索する
 
 1. 検索したいチャンネルのIDをコピー  
-[(チャンネルIDの検索方法)](https://helpfan.jp/user/buzzaid_faq/toolfaq/download/youtube_channelid.html)
+([チャンネルIDの検索方法](https://helpfan.jp/user/buzzaid_faq/toolfaq/download/youtube_channelid.html))
 1. 画面上部の検索窓にIDを貼り付ける
 
 ### お気に入りチャンネルを登録する

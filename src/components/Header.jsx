@@ -60,9 +60,9 @@ const Header = () => {
         >
           <Box sx={{ width: '250px' }}>
             <List subheader={<ListSubheader>YouTube Favorites</ListSubheader>}>
-              <IconListButton icon={<HomeIcon />} text="ホーム" />
-              <IconListButton icon={<StarIcon />} text="お気に入り" />
-              <IconListButton icon={<SettingsIcon />} text="設定" />
+              <IconListButton icon={<HomeIcon />} text="ホーム" component={RouterLink} to="/home" />
+              <IconListButton icon={<StarIcon />} text="お気に入り" component={RouterLink} to="/favorites" />
+              <IconListButton icon={<SettingsIcon />} text="設定" component={RouterLink} to="/settings" />
             </List>
           </Box>
         </SwipeableDrawer>
