@@ -12,9 +12,7 @@ const IconListButton = (props) => {
       <ListItemIcon>
         {props.icon}
       </ListItemIcon>
-      <ListItemText>
-        {props.text}
-      </ListItemText>
+      <ListItemText primary={props.text} />
     </ListItemButton>
   )
 }

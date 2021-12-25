@@ -15,11 +15,13 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import StarIcon from '@mui/icons-material/Star';
+import SettingsIcon from '@mui/icons-material/Settings'
 import Stack from '@mui/material/Stack/Stack';
 import { jsx, css } from '@emotion/react';
 import ListItemButton from '@mui/material/ListItemButton/ListItemButton';
 
 import { IconListButton } from './index';
+import Switch from '@mui/material/Switch/Switch';
 
 const Header = () => {
 
@@ -46,9 +48,20 @@ const Header = () => {
           </IconButton>
           <SwipeableDrawer>
             <List>
-              <IconListButton icon={<HomeIcon />} text="ホーム" />
-              <IconListButton icon={<StarIcon />} text="お気に入り"/>
-
+              {[{
+                icon: <HomeIcon />,
+                text: "ホーム"
+              },
+              {
+                icon: <StarIcon />,
+                text: "お気に入り"
+              },
+              {
+                icon: <SettingsIcon />,
+                text: "設定"
+              }].map((props, index) => {
+                <IconListButton icon={props.icon} text={props.text} />
+              })}
             </List>
           </SwipeableDrawer>
           <TextField
