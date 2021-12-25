@@ -1,7 +1,7 @@
 /**@jsx jsx */
 import React from 'react';
 import { Box, Stack, InputBase, TextField, IconButton } from '@mui/material';
-import  MenuIcon from '@mui/icons-material';
+import  MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import Stack from '@mui/material/Stack/Stack';
 import { jsx, css } from '@emotion/react';
