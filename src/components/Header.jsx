@@ -49,7 +49,7 @@ const Header = () => {
           <MenuIcon />
         </IconButton>
         <Stack direction="row">
-          <TextField label="検索…" variant="filled" size="small"/>
+          <TextField hiddenLabel variant="filled" size="small"/>
         </Stack>
       </Box>
     </>
