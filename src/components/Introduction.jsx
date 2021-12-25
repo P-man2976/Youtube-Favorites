@@ -57,7 +57,7 @@ const introductionCss = css `
     h1 {
       text-align: center;
       font-family: 'Oswald', sans-serif;
-      font-weight: 300;
+      font-weight: 500;
       color: #ee0000
     }
 
