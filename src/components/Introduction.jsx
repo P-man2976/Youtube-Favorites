@@ -4,6 +4,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 import { jsx, css } from '@emotion/react';
+import '../markdown.css'
 
 const introduction = `
 
@@ -48,53 +49,6 @@ const introductionCss = css `
   min-height: 100vh;
   padding: 10px;
   font-family: sans-serif;
-
-  .markdown {
-    font-family: sans-serif;
-
-    h1 {
-      text-align: center;
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      color: #ee0000
-    }
-
-    h2 {
-      font-family: sans-serif;
-      font-weight: 700;
-      border-radius: 4px;
-      background-color: #dd0000;
-      color: white;
-      padding: 10px 15px;
-    }
-
-    h3 {
-      font-family: sans-serif;
-      border-bottom: 3px solid #cc0000;
-    }
-
-    h4 {
-      font-family: sans-serif;
-    }
-
-    h5 {
-      font-family: sans-serif;
-    }
-
-    p {
-      font-family: sans-serif;
-    }
-
-    ul, ol {
-      padding: 0 0 0.5em 1.5em;
-    }
-    
-    ul > li,
-    ol > li {
-      position: relative;
-      margin: 5px 0;
-    }
-  }
 `
 const markdownCss = css `
   font-family: sans-serif;
