@@ -1,7 +1,14 @@
 /**@jsx jsx */
 import React from 'react';
-import { Box, Stack, InputBase, TextField, IconButton } from '@mui/material';
-import  MenuIcon from '@mui/icons-material/Menu';
+import {
+  Box,
+  Stack,
+  InputBase,
+  TextField,
+  IconButton,
+  Divider,
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import Stack from '@mui/material/Stack/Stack';
 import { jsx, css } from '@emotion/react';
@@ -35,21 +42,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const headerCss = css `
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-`
-
 const Header = () => {
   return (
     <>
-      <Box css={headerCss}>
-        <IconButton>
-          <MenuIcon />
-        </IconButton>
-        <Stack direction="row">
-          <TextField hiddenLabel variant="filled" size="small" placeholder="URLまたはIDで検索…"/>
+      <Box sx={{padding: "10px"}}>
+        <Stack direction="row" spacing={2}>
+          <IconButton>
+            <MenuIcon />
+          </IconButton>
+          <TextField
+            hiddenLabel
+            variant="filled"
+            size="small"
+            placeholder="URLまたはIDで検索…"
+            sx={{ width: "60ch" }}
+          />
         </Stack>
       </Box>
     </>
