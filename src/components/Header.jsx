@@ -1,7 +1,9 @@
+/**@jsx jsx */
 import React from 'react';
-import { Box, Stack, InputBase, Toolbar } from '@mui/material';
+import { Box, Stack, InputBase, TextField } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import Stack from '@mui/material/Stack/Stack';
+import { jsx, css } from '@emotion/react';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -32,19 +34,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const headerCss = css `
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  min-height: 5vh
+`
+
 const Header = () => {
   return (
     <>
-      <Box>
-				<Stack direction="row">
-          Youtube Favorites
-        <Search>
-          <StyledInputBase
-            placeholder="検索…"
-            inputProps={{ 'aria-label': 'search' }}
-          />
-        </Search>
-				</Stack>
+      <Box css={headerCss}>
+        <Stack direction="row">
+          <TextField label="検索…" variant="filled" size="small"/>
+        </Stack>
       </Box>
     </>
   );
