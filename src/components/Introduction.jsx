@@ -2,9 +2,6 @@
 /**@jsx jsx */
 import React from 'react';
 import { Box } from '@mui/material';
-
-import React from 'react';
-import { Box } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 import { jsx, css } from '@emotion/react';
 

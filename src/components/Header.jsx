@@ -19,7 +19,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import StarIcon from '@mui/icons-material/Star';
 import SettingsIcon from '@mui/icons-material/Settings';
-import Stack from '@mui/material/Stack/Stack';
 import { jsx, css } from '@emotion/react';
 import ListItemButton from '@mui/material/ListItemButton/ListItemButton';
 
