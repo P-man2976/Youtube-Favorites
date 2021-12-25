@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   List,
+  ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText,
@@ -8,12 +9,12 @@ import {
 
 const IconListButton = (props) => {
   return (
-    <ListItemButton>
+    <ListItem button key={props.key}>
       <ListItemIcon>
         {props.icon}
       </ListItemIcon>
       <ListItemText primary={props.text} />
-    </ListItemButton>
+    </ListItem>
   )
 }
 

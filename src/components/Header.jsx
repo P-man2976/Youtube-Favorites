@@ -8,14 +8,15 @@ import {
   IconButton,
   SwipeableDrawer,
   List,
-  ListItemButton,
+  ListSubheader,
+  ListItem,
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import StarIcon from '@mui/icons-material/Star';
-import SettingsIcon from '@mui/icons-material/Settings'
+import SettingsIcon from '@mui/icons-material/Settings';
 import Stack from '@mui/material/Stack/Stack';
 import { jsx, css } from '@emotion/react';
 import ListItemButton from '@mui/material/ListItemButton/ListItemButton';
@@ -24,10 +25,9 @@ import { IconListButton } from './index';
 import Switch from '@mui/material/Switch/Switch';
 
 const Header = () => {
+  const [menu, setMenu] = useState(false);
 
-  const [menu, setMenu] = useState( false );
-
-  const toggleDrawer = open => event => {
+  const toggleDrawer = (open) => (event) => {
     if (
       event &&
       event.type === 'keydown' &&
@@ -36,46 +36,42 @@ const Header = () => {
       return;
     }
 
-    setMenu( open );
-  }
+    setMenu(open);
+  };
 
   return (
     <>
-      <Box sx={{padding: "10px"}}>
-        <Stack direction="row" spacing={2}>
-          <IconButton onClick={toggleDrawer(true)}>
-            <MenuIcon />
-          </IconButton>
-          <SwipeableDrawer
-            anchor="top"
-            onOpen={toggleDrawer(true)}
-            onClose={toggleDrawer(false)}
-          >
-            <List>
-              {[{
-                icon: <HomeIcon />,
-                text: "ホーム"
-              },
-              {
-                icon: <StarIcon />,
-                text: "お気に入り"
-              },
-              {
-                icon: <SettingsIcon />,
-                text: "設定"
-              }].map((props, index) => {
-                <IconListButton icon={props.icon} text={props.text} />
-              })}
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          padding: '10px',
+        }}
+      >
+        <IconButton onClick={toggleDrawer(true)}>
+          <MenuIcon />
+        </IconButton>
+        <SwipeableDrawer
+          anchor="left"
+          open={menu}
+          onOpen={toggleDrawer(true)}
+          onClose={toggleDrawer(false)}
+        >
+          <Box sx={{ width: '250px' }}>
+            <List subheader={<ListSubheader>YouTube Favorites</ListSubheader>}>
+              <IconListButton icon={<HomeIcon />} text="ホーム" />
+              <IconListButton icon={<StarIcon />} text="お気に入り" />
+              <IconListButton icon={<SettingsIcon />} text="設定" />
             </List>
-          </SwipeableDrawer>
-          <TextField
-            hiddenLabel
-            variant="filled"
-            size="small"
-            placeholder="URLまたはIDで検索…"
-            sx={{ width: "60ch" }}
-          />
-        </Stack>
+          </Box>
+        </SwipeableDrawer>
+        <TextField
+          hiddenLabel
+          variant="filled"
+          size="small"
+          placeholder="URLまたはIDで検索…"
+          sx={{ width: '60ch' }}
+        />
       </Box>
     </>
   );
