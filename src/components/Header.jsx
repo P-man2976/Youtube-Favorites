@@ -49,7 +49,7 @@ const Header = () => {
           <MenuIcon />
         </IconButton>
         <Stack direction="row">
-          <TextField hiddenLabel variant="filled" size="small"/>
+          <TextField hiddenLabel variant="filled" size="small" placeholder="チャンネル名で検索…"/>
         </Stack>
       </Box>
     </>

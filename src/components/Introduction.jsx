@@ -12,8 +12,22 @@ const introduction = `
 # YouTube Favorites
 
 YouTube Favoritesとは、YouTubeのお気に入りチャンネルの配信予定・アーカイブをチェックできるサービスです。
+Googleアカウントでログインすることなく、お気に入りのチャンネルの通知を受け取ったり、チャンネルの今後の予定を確認することができます。
 
 ## How to use
+
+### チャンネルを検索する
+
+#### チャンネルURLを使って検索する
+
+1. 検索したいチャンネルのURLをコピー
+1. 画面上部の検索窓にURLを貼り付ける
+
+#### チャンネルIDを使って検索する
+
+1. 検索したいチャンネルのIDをコピー  
+[(チャンネルIDの検索方法)](https://helpfan.jp/user/buzzaid_faq/toolfaq/download/youtube_channelid.html)
+1. 画面上部の検索窓にIDを貼り付ける
 
 ### お気に入りチャンネルを登録する
 
@@ -25,6 +39,8 @@ YouTube Favoritesとは、YouTubeのお気に入りチャンネルの配信予�
 1. 画面上部のメニューから、「お気に入り」を選ぶ
 
 ## このサイトについて
+
+
 
 `
 
@@ -39,8 +55,10 @@ const introductionCss = css `
     font-family: sans-serif;
 
     h1 {
-      font-family: sans-serif;
-      font-weight: 700;
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+      color: #ee0000
     }
 
     h2 {
