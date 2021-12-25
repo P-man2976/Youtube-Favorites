@@ -1,46 +1,51 @@
 import React from 'react';
-import { AppBar, InputBase } from '@mui/material';
-import { useScrollTrigger } from '@mui/material';
+import { AppBar, InputBase, Toolbar } from '@mui/material';
+import { styled, alpha } from '@mui/material/styles';
 
-function HideOnScroll(props) {
-	const { children, window } = props;
-	// Note that you normally won't need to set the window ref as useScrollTrigger
-	// will default to window.
-	// This is only being set here because the demo is in an iframe.
-	const trigger = useScrollTrigger({
-		target: window ? window() : undefined,
-	});
-
-	return (
-		<Slide appear={false} direction="down" in={!trigger}>
-			{children}
-		</Slide>
-	);
-}
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+}));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-	color: "inherit",
-	"& .MuiInputBase-input": {
-		padding: theme.spacing(1, 1, 1, 0),
-		// vertical padding + font size from searchIcon
-		paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-		transition: theme.transitions.create("width"),
-		width: "100%",
-		[theme.breakpoints.up("md")]: {
-			width: "20ch",
-		},
-	},
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '20ch',
+    },
+  },
 }));
 
 const Header = () => {
-
-	<>
-		<HideOnScroll>
-			<AppBar>
-
-			</AppBar>
-		</HideOnScroll>
-	</>
-}
+  return (
+    <>
+      <AppBar>
+				<Toolbar>
+        <Search>
+          <StyledInputBase
+            placeholder="検索…"
+            inputProps={{ 'aria-label': 'search' }}
+          />
+        </Search>
+				</Toolbar>
+      </AppBar>
+    </>
+  );
+};
 
 export default Header;
