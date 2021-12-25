@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
-import { Header } from './components/index';
+import { Home } from './indexfiles';
 import "./style.css";
 
 export default function App() {
