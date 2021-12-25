@@ -47,6 +47,7 @@ const Header = () => {
           display: 'flex',
           justifyContent: 'space-between',
           padding: '10px',
+          backgroundColor: '#fff',
         }}
       >
         <IconButton onClick={toggleDrawer(true)}>
