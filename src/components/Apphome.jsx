@@ -1,7 +1,16 @@
+/**@jsxRuntime classic */
+/**@jsx jsx */
 import React, { useEffect, useState } from 'react';
 import * as localforage from 'localforage';
 import { Box, Stack, IconButton, Button } from '@mui/material';
+import { jsx, css } from '@emotion/react';
 import { ListChannels } from './index';
+
+const AppHomeCss = css `
+
+  padding: 10px;
+  font-family: sans-serif;
+`
 
 const AppHome = () => {
   const [favorites, setFavorites] = useState(null);
@@ -17,7 +26,7 @@ const AppHome = () => {
   }, []);
 
   return (
-    <Box>
+    <Box css={AppHomeCss}>
       <Stack>
         <Box>
           <h2>お気に入りチャンネル</h2>
