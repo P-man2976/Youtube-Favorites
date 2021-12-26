@@ -7,6 +7,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/">
+        <Route path="home" element={<Home />} />
         <Route path="channels">
           <Route path=":id" element={<Notfound />} />
           <Route path="*" element={<Notfound />} />
