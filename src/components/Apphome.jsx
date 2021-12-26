@@ -3,7 +3,7 @@ import * as localforage from 'localforage';
 import { Box, Stack, IconButton, Button } from '@mui/material';
 import { ListChannels } from './index';
 
-const Apphome = () => {
+const AppHome = () => {
   const [favorites, setFavorites] = useState(null);
 
   useEffect(() => {
@@ -27,3 +27,5 @@ const Apphome = () => {
     </Box>
   );
 };
+
+export default AppHome;
